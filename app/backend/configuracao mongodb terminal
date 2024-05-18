@@ -1,0 +1,31 @@
+CONFIGURAÇÕES PARA MONGO DB NO TERMINAL
+
+- Entrar no mongosh:
+mongosh --host <endereço_do_servidor> --port <porta>
+
+normalmente o host é: 127.0.0.1 ou localhost
+port: 27017;
+
+se for necessario criar um usuario com todos os privilégios:
+
+use admin
+db.createUser({
+  user: "root",
+  pwd: "senha_root",
+  roles: [ { role: "root", db: "admin" } ]
+})
+
+caso seja necessário visualizar quais são os usuários cadastrados:
+use admin
+db.getUsers()
+
+-Entrar com um usuário especifíco:
+mongosh --host <endereço_do_servidor> --port <porta> -u meu_usuario -p
+
+
+- Criando uma database e coleção:
+use <database>
+
+db.createCollection("minha colecao")
+
+
