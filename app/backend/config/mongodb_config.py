@@ -40,7 +40,7 @@ if conected:
     colecaoGallery = database['Galeria']
     colecaoGridFs = GridFS(database, collection="Image")
 
-    print("Coleçoes selecionadas com sucesso!")
+    print("Coleçoes selecionadas com sucesso!!")
 
 
 
